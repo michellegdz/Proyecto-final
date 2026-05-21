@@ -17,8 +17,9 @@ body {
   height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Apila los elementos verticalmente */
   align-items: center;
+  position: relative;
   padding: 30px 20px;
   background:
     linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.37)),
@@ -101,14 +102,83 @@ body {
   font-weight: 300;
 }
 .hero-footer {
-  position: absolute;
-  bottom: 30px;
-  right: 50px;
+  position: static; /* Quitamos el absolute */
+  width: 100%;
+  max-width: 1400px; /* Alineado con el max-width de top-row */
+  text-align: right; /* Mantiene el texto a la derecha */
+  padding-right: 50px; /* Ajusta la separación del borde derecho */
+  padding-bottom: 30px; /* Separación del fondo de la sección */
   color: #e6c275;
   font-family: "Inter", sans-serif;
   font-size: 0.7rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+/* SECCIÓN OBRAS */
+.gallery-section {
+  background: linear-gradient(to bottom, #040a1f 0%, #1e3a8a 50%, #040a1f 100%);
+  min-height: 200vh;
+  padding: 80px 50px;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.section-title {
+  font-family: "Playfair Display", serif;
+  color: #e6c275;
+  margin-bottom: 80px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+/* GALERÍA */
+.gallery-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 30px;
+  background: linear-gradient(to bottom, #040a1f, #1e3a8a);
+  color: white;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 15px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.text-desc p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: justify;
+  color: #ffffff;
+  padding-right: 20px;
+}
+
+.text-limite h3 {
+  font-family: "Unbounded", serif;
+  font-size: 1rem;
+  color: white;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.text-limite .highlight {
+  font-family: "Syne Tactile", sans-serif;
+  color: #a3d9ce;
+  font-size: 2rem;
 }
 
 @media (max-width: 768px) {
