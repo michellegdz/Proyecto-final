@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Apilamos fila superior + contenido central */
+  align-items: center;
+  padding: 30px 20px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.37)),
+    url("../img/FONDO1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+/* HEADER */
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.top-row > i {
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  padding: 8px 30px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:not(.active):hover {
+  color: #f1d8a2;
+}
+
+.nav-links a.active {
+  color: #daa940;
+}
+
+/* 4. CONTENIDO CENTRAL (Título y Subtítulo) */
+.hero-content {
+  flex-grow: 1; /* Ocupa el espacio restante entre la nav y el final */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  text-align: center;
+  margin-top: -50px; /* Ajuste fino para compensar el peso visual */
+}
+
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 6rem;
+  line-height: 0.9; /* Crucial: líneas muy juntas */
+  color: #e6c275;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  letter-spacing: -2px; /* Letras ligeramente condensadas */
+}
+
+.hero-content p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+/* Texto pequeño al final de la pantalla */
+.hero-footer {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  color: #e6c275;
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
