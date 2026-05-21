@@ -17,7 +17,7 @@ body {
   height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column; /* Apilamos fila superior + contenido central */
+  flex-direction: column;
   align-items: center;
   padding: 30px 20px;
   background:
@@ -26,7 +26,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
 }
 
 /* HEADER */
@@ -36,12 +35,15 @@ body {
   align-items: center;
   width: 100%;
   max-width: 1400px;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0 10px;
 }
-
 .top-row > i {
   font-size: 1.3rem;
   cursor: pointer;
   padding: 10px;
+  color: white;
 }
 
 /* NAVBAR */
@@ -51,14 +53,13 @@ body {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 50px;
-  padding: 8px 30px;
+  padding: 8px 20px;
+  flex-shrink: 0;
 }
-
 .nav-links {
   display: flex;
   gap: 30px;
 }
-
 .nav-links a {
   text-decoration: none;
   color: white;
@@ -66,45 +67,39 @@ body {
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
 .nav-links a:not(.active):hover {
   color: #f1d8a2;
 }
-
 .nav-links a.active {
   color: #daa940;
 }
 
-/* 4. CONTENIDO CENTRAL (Título y Subtítulo) */
+/* TEXTO DEL HERO */
 .hero-content {
-  flex-grow: 1; /* Ocupa el espacio restante entre la nav y el final */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra verticalmente */
-  align-items: center; /* Centra horizontalmente */
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-top: -50px; /* Ajuste fino para compensar el peso visual */
+  margin-top: -50px;
 }
-
 .hero-content h1 {
   font-family: "Playfair Display", serif;
-  font-size: 6rem;
-  line-height: 0.9; /* Crucial: líneas muy juntas */
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.9;
   color: #e6c275;
   text-transform: uppercase;
   margin-bottom: 25px;
-  letter-spacing: -2px; /* Letras ligeramente condensadas */
+  letter-spacing: -2px;
 }
-
 .hero-content p {
   font-family: "Inter", sans-serif;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
   color: white;
   letter-spacing: 2px;
   font-weight: 300;
 }
-
-/* Texto pequeño al final de la pantalla */
 .hero-footer {
   position: absolute;
   bottom: 30px;
@@ -114,4 +109,20 @@ body {
   font-size: 0.7rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .top-row {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .top-row > i {
+    display: none;
+  }
+
+  .nav-links {
+    font-size: 0.7rem;
+    gap: 10px;
+  }
 }
