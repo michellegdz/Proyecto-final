@@ -102,12 +102,12 @@ body {
   font-weight: 300;
 }
 .hero-footer {
-  position: static; /* Quitamos el absolute */
+  position: static;
   width: 100%;
-  max-width: 1400px; /* Alineado con el max-width de top-row */
-  text-align: right; /* Mantiene el texto a la derecha */
-  padding-right: 50px; /* Ajusta la separación del borde derecho */
-  padding-bottom: 30px; /* Separación del fondo de la sección */
+  max-width: 1400px;
+  text-align: right;
+  padding-right: 50px;
+  padding-bottom: 30px;
   color: #e6c275;
   font-family: "Inter", sans-serif;
   font-size: 0.7rem;
@@ -128,57 +128,73 @@ body {
 .section-title {
   font-family: "Playfair Display", serif;
   color: #e6c275;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   font-size: 1.4rem;
   text-align: center;
 }
 
 /* GALERÍA */
-.gallery-section {
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery-item {
+  height: 400px;
+}
+
+.gallery-item img {
   width: 100%;
-  min-height: 100vh;
-  padding: 80px 30px;
-  background: linear-gradient(to bottom, #040a1f, #1e3a8a);
+  height: 100%;
+  border-radius: 15px;
+}
+
+/* SECCIÓN EXPERIENCIA */
+.experiencia-section {
+  width: 100%;
+  height: 100vh;
+  /* Aplicamos la imagen de fondo con el filtro oscuro para legibilidad */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57)),
+    url("../img/RV.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
   color: white;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  gap: 15px;
-  width: 100%;
-  max-width: 100%;
+.fijo {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  color: #fff;
 }
 
-.item img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
+.info {
+  position: absolute;
+  top: 65%;
+  left: 5%;
 }
 
-.text-desc p {
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  line-height: 1.4;
+.subtitle {
+  font-size: 1.5rem;
+  color: #e6c275;
+}
+
+.description-footer {
+  position: absolute;
+  bottom: 50px; /* Distancia del borde inferior */
+  right: 5%; /* Distancia del borde derecho */
+  max-width: 400px;
   text-align: justify;
   color: #ffffff;
-  padding-right: 20px;
-}
-
-.text-limite h3 {
-  font-family: "Unbounded", serif;
-  font-size: 1rem;
-  color: white;
-  line-height: 1.1;
-  text-transform: uppercase;
-}
-
-.text-limite .highlight {
-  font-family: "Syne Tactile", sans-serif;
-  color: #a3d9ce;
-  font-size: 2rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
