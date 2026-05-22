@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  html::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 30px 20px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57)),
+    url("../img/FONDO2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: -50px;
+}
+
+/* HEADER */
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0 10px;
+}
+.top-row > i {
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  padding: 8px 20px;
+  flex-shrink: 0;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-links a:not(.active):hover {
+  color: #f1d8a2;
+}
+.nav-links a.active {
+  color: #daa940;
+}
+.navbar.active {
+  display: flex !important;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: rgba(4, 10, 31, 0.95);
+  flex-direction: column;
+  padding: 20px;
+}
+.contacto-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 80px;
+  background-color: #040a1f;
+  color: white;
+  min-height: 80vh;
+}
+
+.col-info,
+.col-form {
+  flex: 1;
+  max-width: 450px;
+}
+
+.col-form input,
+.col-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  color: white;
+}
+
+.col-form button {
+  background-color: #e6c275;
+  color: #040a1f;
+  padding: 12px 40px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
