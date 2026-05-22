@@ -10,6 +10,11 @@ body {
   height: 100%;
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  html::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* HERO */
@@ -27,6 +32,15 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+.hero-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: -50px;
 }
 
 /* HEADER */
@@ -49,6 +63,10 @@ body {
 
 /* NAVBAR */
 .navbar {
+  display: flex;
+  position: fixed;
+  top: 20px;
+  left: 50%;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -56,6 +74,8 @@ body {
   border-radius: 50px;
   padding: 8px 20px;
   flex-shrink: 0;
+  transform: translateX(-50%);
+  z-index: 1000;
 }
 .nav-links {
   display: flex;
@@ -74,15 +94,15 @@ body {
 .nav-links a.active {
   color: #daa940;
 }
-
-.hero-content {
-  flex-grow: 1;
-  display: flex;
+.navbar.active {
+  display: flex !important;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: rgba(4, 10, 31, 0.95);
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: -50px;
+  padding: 20px;
 }
 
 /* TEXTO DEL HERO */
@@ -158,13 +178,52 @@ body {
     url("../img/RV.png");
   background-size: cover;
   background-position: center;
-  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 80px;
+  transition: background-image 0.5s ease-in-out;
+}
+.experiencia-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.experiencia-titulo h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 5rem;
   color: white;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.subtitulo-amarillo {
+  color: #e6c275;
+  font-size: 1.5rem;
+  font-weight: medium;
+  font-family: "Playfair Display", sans-serif;
+}
+
+.experiencia-info {
+  max-width: 700px;
+}
+
+.experiencia-info p {
+  color: white;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  opacity: 0.8;
 }
 
 /* SECCIÓN UBICACIÓN */
 .ubicación-section {
-  background: linear-gradient(to bottom, #040a1f 0%, #1e3a8a 50%);
+  background: linear-gradient(to bottom, #040a1f 0%, #1e3a8a 80%);
   min-height: 100vh;
   padding: 60px 80px;
   display: flex;
