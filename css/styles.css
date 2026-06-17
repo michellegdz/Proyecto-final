@@ -137,6 +137,123 @@ body {
   text-transform: uppercase;
 }
 
+/* SECCIÓN EXPERIENCIA*/
+
+.experiencia-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  overflow: hidden;
+  padding: 80px 8%;
+  background-color: #040a1f;
+}
+
+.section-title {
+  font-family: "Unbounded", serif;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  color: white !important;
+  text-transform: uppercase;
+  z-index: 10;
+  margin: 0;
+  opacity: 1 !important;
+  animation: none !important;
+}
+
+.carrusel-fondos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  opacity: 0;
+  animation: carouselAnimation 15s infinite ease-in-out;
+}
+
+.fondo1 {
+  background:
+    linear-gradient(rgba(4, 10, 31, 0.65), rgba(4, 10, 31, 0.9)),
+    url("../img/RV.png");
+}
+.fondo2 {
+  background:
+    linear-gradient(rgba(4, 10, 31, 0.65), rgba(4, 10, 31, 0.9)),
+    url("../img/360.png");
+  animation-delay: 5s;
+}
+.fondo3 {
+  background:
+    linear-gradient(rgba(4, 10, 31, 0.65), rgba(4, 10, 31, 0.9)),
+    url("../img/BIO.png");
+  animation-delay: 10s;
+}
+
+.experiencia-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 200px;
+}
+
+.fondo-contenido {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+
+  opacity: 0;
+  animation: carouselAnimation 15s infinite ease-in-out;
+}
+
+.contenido1 {
+  animation-delay: 0s;
+}
+.contenido2 {
+  animation-delay: 5s;
+}
+.contenido3 {
+  animation-delay: 10s;
+}
+
+/*ANIMACIÓN DE TRANSICIÓN (CROSSFADE)*/
+@keyframes carouselAnimation {
+  0% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /* SECCIÓN GALERÍA */
 .gallery-section {
   background: linear-gradient(to bottom, #040a1f 0%, #1e3a8a 50%, #040a1f 100%);
