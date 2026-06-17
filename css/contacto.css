@@ -78,6 +78,7 @@ body {
   z-index: 1000;
 }
 .nav-links {
+  list-style: none;
   display: flex;
   gap: 30px;
 }
