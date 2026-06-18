@@ -139,7 +139,7 @@ body {
 
 /* SECCIÓN EXPERIENCIA*/
 
-.experiencia-section {
+.experiencia {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -151,17 +151,7 @@ body {
   background-color: #040a1f;
 }
 
-.section-title {
-  font-family: "Unbounded", serif;
-  font-size: clamp(3.5rem, 8vw, 7rem);
-  color: white !important;
-  text-transform: uppercase;
-  z-index: 10;
-  margin: 0;
-  opacity: 1 !important;
-  animation: none !important;
-}
-
+/*FONDOS*/
 .carrusel-fondos {
   position: absolute;
   top: 0;
@@ -184,43 +174,57 @@ body {
   animation: carouselAnimation 15s infinite ease-in-out;
 }
 
-.fondo1 {
+.imagen1 {
   background:
-    linear-gradient(rgba(4, 10, 31, 0.65), rgba(4, 10, 31, 0.9)),
+    linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.37)),
     url("../img/RV.png");
 }
-.fondo2 {
+.imagen2 {
   background:
-    linear-gradient(rgba(4, 10, 31, 0.65), rgba(4, 10, 31, 0.9)),
+    linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.37)),
     url("../img/360.png");
   animation-delay: 5s;
 }
-.fondo3 {
+.imagen3 {
   background:
-    linear-gradient(rgba(4, 10, 31, 0.65), rgba(4, 10, 31, 0.9)),
+    linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.37)),
     url("../img/BIO.png");
   animation-delay: 10s;
 }
 
+/*TEXTOS*/
+.experiencia h2 {
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  text-align: left;
+  font-size: clamp(3.5rem, 7.5vw, 6rem);
+  max-width: 420px;
+  line-height: 1;
+  margin: 0;
+  z-index: 11;
+}
 .experiencia-wrapper {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 200px;
+  position: absolute;
+  bottom: 80px;
+  left: 8%;
+  right: 8%;
+  height: 180px;
+  z-index: 10;
+  pointer-events: none;
 }
 
-.fondo-contenido {
+.experiencia-contenido {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 40px;
-
   opacity: 0;
   animation: carouselAnimation 15s infinite ease-in-out;
 }
@@ -235,18 +239,37 @@ body {
   animation-delay: 10s;
 }
 
-/*ANIMACIÓN DE TRANSICIÓN (CROSSFADE)*/
+.experiencia-contenido h3 {
+  font-family: "Playfair Display", serif;
+  color: #e6c275 !important;
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-weight: 500;
+  margin-left: 450px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+.experiencia-contenido p {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+  line-height: 1.5;
+  text-align: left;
+  max-width: 480px;
+  margin-bottom: 5px;
+}
+/*ANIMACIÓN*/
 @keyframes carouselAnimation {
   0% {
     opacity: 0;
   }
-  3% {
+  1.5% {
     opacity: 1;
   }
-  30% {
-    opacity: 1;
-  }
+
   33.33% {
+    opacity: 1;
+  }
+  36.5% {
     opacity: 0;
   }
   100% {
