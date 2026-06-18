@@ -4,48 +4,61 @@
     <meta charset="UTF-8" />
     <title>Contacto | Van Gogh: Immersive Experience</title>
     <link rel="stylesheet" href="css/contacto.css" />
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Syne+Tactile&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Iconos -->
+    <script
+      src="https://kit.fontawesome.com/c3fd22b8e3.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <!-- HERO -->
-    <header class="hero">
+    <section class="contacto-main">
       <div class="top-row">
         <i class="fa-solid fa-cart-shopping"></i>
-
-        <!-- NAVBAR -->
         <nav class="navbar" id="nav-menu">
           <div class="nav-links">
             <a href="index.html">INICIO</a>
             <a href="entradas.html">ENTRADAS</a>
             <a href="contacto.html" class="active">CONTACTO</a>
-            <a href="#ubicación">UBICACIÓN</a>
-            <a href="#experiencia">EXPERIENCIA</a>
           </div>
         </nav>
-
         <i class="fa-solid fa-user"></i>
       </div>
-    </header>
-    <section class="contacto-main">
-      <div class="col-info">
-        <h1>VAN GOGH: IMMERSIVE EXPERIENCE</h1>
-        <h3>Suscríbete</h3>
-        <p>PARA NO PERDERTE NINGUNA EXPOSICIÓN</p>
-        <div class="redes">
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-tiktok"></i>
-          <i class="fa-brands fa-x-twitter"></i>
-        </div>
-      </div>
 
-      <div class="col-form">
-        <h2>CONTÁCTANOS</h2>
-        <p>CENTRO DE ATENCIÓN AL CLIENTE ESPECIALIZADO</p>
-        <form>
-          <input type="text" placeholder="NOMBRE" required />
-          <input type="email" placeholder="EMAIL" required />
-          <textarea placeholder="MENSAJE" rows="5"></textarea>
-          <button type="submit">ENVIAR</button>
-        </form>
+      <div class="contacto-contenido">
+        <div class="col-info">
+          <h1>VAN GOGH: IMMERSIVE EXPERIENCE</h1>
+          <h3>Suscríbete</h3>
+          <p>PARA NO PERDERTE NINGUNA EXPOSICIÓN</p>
+          <div class="redes">
+            <a href="https://www.instagram.com" target="_blank">
+              <i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.tiktok.com" target="_blank">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://x.com" target="_blank">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-form">
+          <h2>CONTÁCTANOS</h2>
+          <p>CENTRO DE ATENCIÓN AL CLIENTE ESPECIALIZADO</p>
+          <form>
+            <input type="text" placeholder="NOMBRE" required />
+            <input type="email" placeholder="EMAIL" required />
+            <textarea placeholder="MENSAJE" rows="4" required></textarea>
+            <button type="submit">ENVIAR</button>
+          </form>
+        </div>
       </div>
     </section>
   </body>

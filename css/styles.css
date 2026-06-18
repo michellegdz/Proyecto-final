@@ -137,6 +137,55 @@ body {
   text-transform: uppercase;
 }
 
+/* SECCIÓN GALERÍA */
+.gallery-section {
+  background-color: #040a1f;
+  min-height: 100vh;
+  padding: 70px 0%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  color: #e6c275;
+  font-size: clamp(1rem, 2vw, 3rem);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  height: 260px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.gallery-item img {
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
 /* SECCIÓN EXPERIENCIA*/
 
 .experiencia {
@@ -219,7 +268,7 @@ body {
 .experiencia-contenido {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 30px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -244,7 +293,7 @@ body {
   color: #e6c275 !important;
   font-size: clamp(1rem, 1.5vw, 1.3rem);
   font-weight: 500;
-  margin-left: 450px;
+  margin-left: 250px;
   margin-bottom: 5px;
   white-space: nowrap;
 }
@@ -253,7 +302,7 @@ body {
   color: #ffffff;
   font-size: clamp(0.9rem, 1.1vw, 1.05rem);
   line-height: 1.5;
-  text-align: left;
+  text-align: justify;
   max-width: 480px;
   margin-bottom: 5px;
 }
@@ -275,43 +324,6 @@ body {
   100% {
     opacity: 0;
   }
-}
-
-/* SECCIÓN GALERÍA */
-.gallery-section {
-  background: linear-gradient(to bottom, #040a1f 0%, #1e3a8a 50%, #040a1f 100%);
-  min-height: 200vh;
-  padding: 80px 50px;
-  color: white;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.section-title {
-  font-family: "Playfair Display", serif;
-  color: #e6c275;
-  margin-bottom: 30px;
-  font-size: 1.4rem;
-  text-align: center;
-}
-
-/* GALERÍA */
-.gallery-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  padding: 20px;
-}
-
-.gallery-item {
-  margin: 0;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 400px;
-  border-radius: 15px;
 }
 
 /* SECCIÓN UBICACIÓN */
