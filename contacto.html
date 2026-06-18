@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Contacto | Van Gogh: Immersive Experience</title>
-    <link rel="stylesheet" href="css/contacto.css" />
+    <link rel="stylesheet" href="css/contacto.css" type="text/css" />
+    <link href="css/styles_rwd.css" rel="stylesheet" type="text/css" />
     <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,13 +22,26 @@
     <section class="contacto-main">
       <div class="top-row">
         <i class="fa-solid fa-cart-shopping"></i>
+
+        <input
+          type="checkbox"
+          id="menu-toggle"
+          class="menu-check"
+          style="display: none"
+        />
+
+        <label for="menu-toggle" id="hamburguesa" class="hamburguesa">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+
         <nav class="navbar" id="nav-menu">
-          <div class="nav-links">
-            <a href="index.html">INICIO</a>
-            <a href="entradas.html">ENTRADAS</a>
-            <a href="contacto.html" class="active">CONTACTO</a>
-          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="entradas.html">ENTRADAS</a></li>
+            <li><a href="contacto.html" class="active">CONTACTO</a></li>
+          </ul>
         </nav>
+
         <i class="fa-solid fa-user"></i>
       </div>
 

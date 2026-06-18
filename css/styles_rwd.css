@@ -1,0 +1,314 @@
+.menu-check,
+#hamburguesa,
+.hamburguesa {
+  display: none !important;
+}
+
+/*BREAKPOINT MÓVIL Y TABLET*/
+@media (max-width: 768px) {
+  .hamburguesa,
+  #hamburguesa.hamburguesa {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem !important;
+    color: #ffffff !important;
+    cursor: pointer;
+    z-index: 1002 !important;
+    order: -1;
+  }
+
+  .top-row {
+    padding: 15px 25px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    position: relative;
+    z-index: 1002;
+  }
+
+  .navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: -100% !important;
+    transform: none !important;
+    width: 260px !important;
+    height: 100vh !important;
+    background: rgba(4, 10, 31, 0.98) !important;
+    border-radius: 0 !important;
+    border: none !important;
+    border-right: 1px solid rgba(235, 194, 117, 0.2) !important;
+    padding: 100px 35px !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    opacity: 0 !important;
+    z-index: 1001 !important;
+    backdrop-filter: blur(10px) !important;
+    transition:
+      left 0.35s ease-out,
+      opacity 0.3s ease-out !important;
+  }
+
+  .menu-check:checked ~ .navbar {
+    left: 0 !important;
+    opacity: 1 !important;
+  }
+
+  .nav-links {
+    flex-direction: column !important;
+    gap: 25px !important;
+    width: 100% !important;
+    list-style: none !important;
+    padding: 0 !important;
+    display: flex !important;
+  }
+
+  .nav-links li {
+    width: 100% !important;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem !important;
+    font-family: "Inter", sans-serif !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 12px 0 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:not(.active):hover {
+    color: #f1d8a2 !important;
+  }
+
+  .nav-links a.active {
+    color: #e6c275 !important;
+    border-bottom: 1px solid rgba(230, 194, 117, 0.4) !important;
+  }
+
+  /*SECCIÓN DE CONTACTO MÓVIL*/
+  html,
+  body,
+  .contacto-main {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+  }
+
+  .contacto-main {
+    padding: 30px 20px 60px 20px !important;
+  }
+
+  .contacto-contenido {
+    flex-direction: column !important;
+    gap: 40px !important;
+    width: 100% !important;
+    margin-top: 30px !important;
+  }
+
+  .col-info {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .col-info h1 {
+    font-size: 2.2rem !important;
+    margin-bottom: 25px !important;
+  }
+
+  .col-info h3 {
+    font-size: 1.4rem !important;
+  }
+
+  .col-info .redes {
+    justify-content: center !important;
+    margin-bottom: 10px !important;
+  }
+
+  .col-form {
+    width: 100% !important;
+    padding: 25px 20px !important;
+  }
+
+  .col-form h2 {
+    font-size: 1.3rem !important;
+  }
+
+  .col-form button {
+    width: 50% !important;
+    margin: 10px auto 0 auto !important;
+    font-size: 0.8rem !important;
+    padding: 14px !important;
+  }
+
+  /*INICIO*/
+  .hero-content h1 {
+    font-size: 3.2rem !important;
+    letter-spacing: 2px !important;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem !important;
+    padding: 0 10px !important;
+  }
+
+  /*SECCIÓN GALERÍA*/
+
+  .gallery-section {
+    padding: 40px 15px !important;
+  }
+
+  .gallery-section .section-title {
+    font-size: 1.4rem !important;
+    text-align: center !important;
+    margin-bottom: 25px !important;
+    line-height: 1.4 !important;
+  }
+
+  .gallery-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: 10px 10px !important;
+    width: 100% !important;
+  }
+
+  .gallery-item {
+    flex: 1 1 calc(40%) !important;
+    min-width: 70px !important;
+    height: 100px !important;
+    border-radius: 4px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .gallery-item img {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+  }
+
+  /*SECCIÓN EXPERIENCIAS*/
+  .experiencia {
+    padding: 100px 40px !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    position: relative !important;
+  }
+
+  .experiencia h2 {
+    font-size: 3rem !important;
+    text-align: left !important;
+    align-self: flex-start !important;
+    margin-bottom: -30px !important;
+    line-height: 1.4 !important;
+    width: 100% !important;
+  }
+
+  .experiencia-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    align-items: flex-start !important;
+    position: static !important;
+    transform: none !important;
+  }
+
+  .experiencia-contenido,
+  .experiencia-wrapper div.experiencia-contenido,
+  .experiencia-wrapper .contenido1,
+  .experiencia-wrapper .contenido2,
+  .experiencia-wrapper .contenido3 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .experiencia-contenido h3 {
+    color: #e6c275 !important;
+    width: 100% !important;
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    font-size: 1.2rem !important;
+    text-align: left !important;
+    margin-bottom: 8px !important;
+    line-height: 1.4 !important;
+  }
+
+  .experiencia-contenido p {
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+    text-align: left !important;
+    width: 100% !important;
+    margin: 0 !important;
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /*SECCIÓN UBICACIÓN*/
+  .ubicación {
+    padding: 40px 20px !important;
+    height: auto !important;
+  }
+
+  .ubicación-content {
+    flex-direction: column !important;
+    gap: 40px !important;
+    width: 100% !important;
+  }
+
+  .texto-info {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .texto-info h2 {
+    font-size: 1.8rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  .datos-ubicación {
+    flex-direction: column !important;
+    gap: 20px !important;
+    margin-top: 30px !important;
+    text-align: left !important;
+    padding: 0 15px !important;
+  }
+
+  .mapa-box {
+    width: 100% !important;
+    height: 280px !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+
+  .mapa-box iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

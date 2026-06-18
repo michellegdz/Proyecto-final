@@ -31,6 +31,12 @@ body {
 }
 
 /* NAVBAR */
+.hamburguesa {
+  display: none;
+}
+.menu-check {
+  display: none;
+}
 .top-row {
   display: flex;
   justify-content: space-between;
