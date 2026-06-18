@@ -47,10 +47,11 @@
     </header>
 
     <!-- FORMULARIO ENTRADAS -->
+
     <section class="entradas-section">
       <div class="contenido-entradas">
         <h1>Selecciona tus entradas</h1>
-        <form onsubmit="return comprar();">
+        <form id="compra-form">
           <label for="nombre">Nombre:</label>
           <input
             type="text"
@@ -98,9 +99,13 @@
         <p>Nombre: <span id="nom"></span></p>
         <p>Total: <span id="ct"></span></p>
         <button
-          onclick="document.getElementById('modal').style.display = 'none'"
+          onclick="
+            document
+              .getElementById('modal')
+              .style.setProperty('display', 'none', 'important')
+          "
         >
-          Aceptar
+          Cerrar
         </button>
       </div>
     </div>

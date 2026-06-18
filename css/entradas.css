@@ -153,3 +153,68 @@ body {
   cursor: pointer;
   transition: 0.5s;
 }
+
+/* MENSAJE CONFIRMACIÓN */
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(4, 10, 31, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#modal > div {
+  background: #0c1533;
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: white;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+#modal h2 {
+  font-family: "Unbounded", serif;
+  color: #e6c275;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+#modal p {
+  font-family: "Inter", sans-serif;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+#modal p span {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#modal button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: transparent;
+  border: 1px solid #e6c275;
+  color: #e6c275;
+  font-family: "Unbounded", serif;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#modal button:hover {
+  background-color: #e6c275;
+  color: #040a1f;
+}
